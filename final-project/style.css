@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, rgba(71, 255, 108, 1), rgba(9, 255, 255, 0.8), rgba(21, 80, 218, 0.6));
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: rgb(255, 243, 243);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0px;
+    color: rgba(255, 255, 255, 1);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 5px 0px;
+    transition: all 0.3s ease;
+}
+
+header nav a:hover {
+    font-weight: 700;
+    border-bottom: 2px solid rgba(255, 255, 255, 1);
+    background: none;
+    border-radius: 0px;
+    padding: 5px 0px;
+}
+
+header nav img {
+    margin: 0px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20%;
+    padding: 5px;
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+}
+
+header nav img:hover {
+    transform: scale(1.05);
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(0, 213, 255, 0.8));
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+main h1 {
+    font-size: 48px;
+    text-align: center;
+    color: rgba(44, 62, 80, 1);
+    margin-bottom: 10px;
+}
+
+main h2 {
+    font-size: 35.2px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgba(52, 73, 94, 1);
+}
+
+main p {
+    font-size: 17.6px;
+    line-height: 1.8;
+    color: rgba(85, 85, 85, 1);
+    text-align: center;
+    max-width: 800px;
+    margin: 0px auto 20px;
+}
+
+main ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px auto;
+    max-width: 600px;
+}
+
+main ul li {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    color: rgba(51, 51, 51, 1);
+    display: flex;
+    align-items: center;
+}
+
+main ul li:before {
+    content: "✔️";
+    margin-right: 10px;
+    color: rgba(46, 204, 113, 1);
+    font-size: 19.2px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+main form label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    align-self: flex-start;
+    color: rgba(51, 51, 51, 1);
+}
+
+main form input,
+main form textarea {
+    padding: 12px;
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+main form input:focus,
+main form textarea:focus {
+    border-color: rgba(0, 123, 255, 1);
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+}
+
+main form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+main form button {
+    background-color: rgba(0, 123, 255, 1);
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 17.6px;
+    font-weight: 600;
+}
+
+main form button:hover {
+    background-color: rgba(0, 86, 179, 1);
+    transform: translateY(-2px);
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 72, 255, 0.7);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 10px 10px 0px 0px;
+    margin-top: 20px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 5px 0px;
+    font-size: 14.4px;
+    color: rgba(238, 238, 238, 1);
+}
+
+footer a {
+    color: rgba(170, 255, 234, 1);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#home h1 {
+    font-size: 48px;
+    text-align: center;
+    color: rgba(44, 62, 80, 1);
+    margin-bottom: 10px;
+}
+
+#home div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+#clock {
+    font-size: 48px;
+    color: rgba(44, 62, 80, 1);
+    font-weight: 700;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    border: 5px solid rgba(0, 213, 255, 1);
+    border-radius: 10px;
+}
+
+.social-media li a {
+    color: rgba(0, 72, 255, 1);
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media li a:hover {
+    color: rgb(0, 213, 255);
+    font-weight: bolder;
+    text-decoration: underline;
+    transition: all ease-in-out 0.4s;
+
+}
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: 1fr; /* Changed back to single column for larger screens too, as the content flow makes more sense this way for a single page */
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    header nav {
+        flex-direction: row;
+    }
+
+    header nav ul {
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 767px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    header nav a {
+        font-size: 17.6px;
+    }
+
+    main {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    main h1 {
+        font-size: 35.2px;
+    }
+
+    main h2 {
+        font-size: 28.8px;
+    }
+
+    main p {
+        font-size: 16px;
+    }
+
+    main form {
+        padding: 20px;
+    }
+
+    main form input,
+    main form textarea {
+        font-size: 15.2px;
+    }
+
+    main form button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav img {
+        width: 50px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header nav ul {
+        gap: 10px;
+    }
+
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    main h1 {
+        font-size: 28.8px;
+    }
+
+    main h2 {
+        font-size: 24px;
+    }
+
+    #clock {
+        font-size: 36px; /* Smaller clock on very small screens */
+        padding: 8px;
+    }
+
+}
