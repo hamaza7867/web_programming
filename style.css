@@ -170,30 +170,36 @@ main {
     padding: 25px 40px;
     border-radius: 15px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
-    display: inline-block;
-    margin-top: 20px;
-    min-height: 200px;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+    /* Removed min-height here as inner wrapper will handle fixed dimensions */
 }
 
-.local-clock-display h2 {
-    color: #a0e0ff;
-    font-size: 27px;
-    margin-bottom: 10px;
+/* New wrapper for fixed clock dimensions */
+.clock-content-wrapper {
+    width: 280px; /* Fixed width for mobile, considering 12:59:59 PM */
+    height: 90px; /* Fixed height for mobile, considering two lines of text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow if text somehow exceeds fixed box */
 }
 
 #clock {
-    font-size: 68.4px;
+    font-size: 68.4px; /* Adjust as needed within fixed box */
     font-weight: bold;
     margin-bottom: 5px;
+    white-space: nowrap; /* Prevent time from wrapping */
 }
 
 #date {
-    font-size: 23.4px;
+    font-size: 23.4px; /* Adjust as needed within fixed box */
     opacity: 0.9;
+    white-space: nowrap; /* Prevent date from wrapping */
 }
 
 #world-clocks h3 {
@@ -216,11 +222,11 @@ main {
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     transition: transform 0.2s ease;
-    min-height: 130px; 
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 160px; /* Kept min-height for general card structure */
 }
 
 .country-clock-card:hover {
@@ -237,11 +243,13 @@ main {
     font-size: 45px;
     font-weight: bold;
     margin-bottom: 5px;
+    white-space: nowrap; /* Prevent time from wrapping */
 }
 
 .world-clock-date {
     font-size: 16.2px;
     opacity: 0.8;
+    white-space: nowrap; /* Prevent date from wrapping */
 }
 
 #features ul {
@@ -417,6 +425,19 @@ footer {
     #backToTopBtn {
         bottom: 70px;
     }
+
+    .clock-content-wrapper {
+        width: 260px; /* Adjusted for smaller mobile screens */
+        height: 85px; /* Adjusted for smaller mobile screens */
+    }
+
+    #clock {
+        font-size: 60px; /* Smaller font for tiny screens */
+    }
+
+    #date {
+        font-size: 20px; /* Smaller font for tiny screens */
+    }
 }
 
 @media (min-width: 768px) {
@@ -468,6 +489,17 @@ footer {
         font-size: 63px;
     }
 
+    .local-clock-display {
+        /* Remove specific flex centering to allow clock-content-wrapper to control */
+        justify-content: flex-start; /* Reset from center */
+        align-items: center;
+    }
+
+    .clock-content-wrapper {
+        width: 450px; /* Fixed width for tablets/desktops */
+        height: 120px; /* Fixed height for tablets/desktops */
+    }
+
     #clock {
         font-size: 90px;
     }
@@ -499,8 +531,17 @@ footer {
         font-size: 72px;
     }
 
+    .clock-content-wrapper {
+        width: 600px; /* Fixed width for large desktops */
+        height: 150px; /* Fixed height for large desktops */
+    }
+
     #clock {
         font-size: 108px;
+    }
+
+    #date {
+        font-size: 32px; /* Increased date font size slightly for larger screens */
     }
 
     .world-clock-time {

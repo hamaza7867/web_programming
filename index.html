@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Preload Poppins font for better performance and to reduce layout shifts -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgMopPxJlFdGC.woff2" as="font" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgMopPxJkEdGC7.woff2" as="font" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v21/pxiByp8kv8JHgMopPxKmFdGC.woff2" as="font" crossorigin>
     <title>digiclock | Get into Time</title>
 </head>
 <body>
@@ -32,8 +36,10 @@
             <p>Your ultimate digital timekeeping companion.</p>
             <div class="local-clock-display">
                 <h2>Current Local Time</h2>
-                <div id="clock"></div>
-                <div id="date"></div>
+                <div class="clock-content-wrapper">
+                    <div id="clock"></div>
+                    <div id="date"></div>
+                </div>
             </div>
         </section>
 
@@ -97,17 +103,17 @@
             <h2>Follow Us</h2>
             <p>Stay updated with our latest developments and news!</p>
             <ul class="social-media">
-                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-                <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
-                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             </ul>
         </section>
 
         <section id="contact" class="page-section">
             <h2>Contact Us</h2>
             <p>We value your feedback. Feel free to send us a message.</p>
-            <form>
+            <form action="#" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
 
@@ -125,10 +131,13 @@
     <footer>
         <p>&copy; 2025 digiclock. All rights reserved.</p>
     </footer>
+
     <button id="backToTopBtn" title="Go to top">&#8593;</button>
+    
     <button id="whatsappBtn" title="Chat on WhatsApp">
         <img src="assets/logo.svg" alt="WhatsApp" style="width: 30px; height: 30px; vertical-align: middle;">
     </button>
+
     <script src="script.js"></script>
 </body>
 </html>
