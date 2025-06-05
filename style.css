@@ -19,7 +19,7 @@ body {
         "header"
         "main"
         "footer";
-    font-size: 18px;
+    font-size: clamp(16px, 3.5vw, 18px);
 }
 
 header {
@@ -81,7 +81,7 @@ header nav {
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 19.8px;
+    font-size: clamp(16px, 4vw, 19.8px);
     padding: 10px 20px;
     display: block;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -144,22 +144,22 @@ main {
 .page-section h1, .page-section h2, .page-section h3 {
     color: #2193b0;
     margin-bottom: 15px;
-    font-size: 36px;
+    font-size: clamp(30px, 8vw, 45px);
 }
 
 .page-section p {
-    font-size: 18px;
+    font-size: clamp(16px, 3.5vw, 18px);
     line-height: 1.6;
     max-width: 800px;
     margin: 0px auto 15px auto;
 }
 
 #home h1 {
-    font-size: 50.4px;
+    font-size: clamp(40px, 10vw, 72px);
     margin-bottom: 10px;
 }
 #home p {
-    font-size: 21.6px;
+    font-size: clamp(18px, 4.5vw, 21.6px);
     margin-bottom: 25px;
     color: #555;
 }
@@ -178,8 +178,8 @@ main {
 }
 
 .clock-content-wrapper {
-    width: 290px; /* Adjusted width for mobile to fit longer times */
-    height: 120px; /* Adjusted height for mobile to fit both lines of text */
+    width: 320px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -188,20 +188,20 @@ main {
 }
 
 #clock {
-    font-size: 55px; /* Adjusted font size for mobile to fit within wrapper */
+    font-size: clamp(55px, 15vw, 90px);
     font-weight: bold;
     margin-bottom: 5px;
     white-space: nowrap;
 }
 
 #date {
-    font-size: 20px; /* Adjusted font size for mobile to fit within wrapper */
+    font-size: clamp(20px, 5vw, 30px);
     opacity: 0.9;
     white-space: nowrap;
 }
 
 #world-clocks h3 {
-    font-size: 32.4px;
+    font-size: clamp(28px, 7vw, 32.4px);
     margin-top: 30px;
 }
 
@@ -233,19 +233,19 @@ main {
 
 .country-clock-card h3 {
     color: #a0e0ff;
-    font-size: 27px;
+    font-size: clamp(24px, 6vw, 27px);
     margin-bottom: 10px;
 }
 
 .world-clock-time {
-    font-size: 45px;
+    font-size: clamp(40px, 10vw, 63px);
     font-weight: bold;
     margin-bottom: 5px;
     white-space: nowrap;
 }
 
 .world-clock-date {
-    font-size: 16.2px;
+    font-size: clamp(15px, 4vw, 16.2px);
     opacity: 0.8;
     white-space: nowrap;
 }
@@ -264,7 +264,7 @@ main {
     background-color: #e0f7fa;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 19.8px;
+    font-size: clamp(17px, 4vw, 19.8px);
     color: #00796b;
     max-width: 500px;
     width: 100%;
@@ -308,6 +308,7 @@ form label {
     margin-bottom: 8px;
     font-weight: bold;
     color: #333;
+    font-size: clamp(16px, 3.5vw, 18px);
 }
 
 form input[type="text"],
@@ -317,7 +318,7 @@ form textarea {
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: clamp(16px, 3.5vw, 18px);
     width: 100%;
     box-sizing: border-box;
 }
@@ -334,7 +335,7 @@ form button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 19.8px;
+    font-size: clamp(17px, 4vw, 19.8px);
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -367,7 +368,7 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    font-size: 28px;
+    font-size: clamp(24px, 6vw, 28px);
     line-height: 50px;
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -417,7 +418,6 @@ footer {
         height: 45px;
         bottom: 15px;
         right: 15px;
-        font-size: 24px;
         line-height: 45px;
     }
     #backToTopBtn {
@@ -425,16 +425,8 @@ footer {
     }
 
     .clock-content-wrapper {
-        width: 290px; /* Adjusted for smaller mobile screens */
-        height: 120px; /* Adjusted for smaller mobile screens */
-    }
-
-    #clock {
-        font-size: 55px; /* Adjusted font for tiny screens */
-    }
-
-    #date {
-        font-size: 20px; /* Adjusted font for tiny screens */
+        width: 320px;
+        height: 130px;
     }
 }
 
@@ -479,34 +471,18 @@ footer {
         padding: 50px;
     }
 
-    .page-section h1, .page-section h2, .page-section h3 {
-        font-size: 45px;
-    }
-
-    #home h1 {
-        font-size: 63px;
-    }
-
     .local-clock-display {
         justify-content: center;
         align-items: center;
     }
 
     .clock-content-wrapper {
-        width: 400px; /* Adjusted width for tablets/desktops */
-        height: 110px; /* Adjusted height for tablets/desktops */
+        width: 420px;
+        height: 120px;
     }
 
-    #clock {
-        font-size: 75px; /* Adjusted font for tablets/desktops */
-    }
-
-    #date {
-        font-size: 24px; /* Adjusted font for tablets/desktops */
-    }
-
-    .world-clock-time {
-        font-size: 54px;
+    .country-clock-card {
+        min-height: 160px;
     }
 
     #features ul {
@@ -524,24 +500,9 @@ footer {
 }
 
 @media (min-width: 1024px) {
-    #home h1 {
-        font-size: 72px;
-    }
 
     .clock-content-wrapper {
-        width: 550px; /* Adjusted width for large desktops */
-        height: 140px; /* Adjusted height for large desktops */
-    }
-
-    #clock {
-        font-size: 90px; /* Adjusted font for large desktops */
-    }
-
-    #date {
-        font-size: 30px; /* Adjusted font for large desktops */
-    }
-
-    .world-clock-time {
-        font-size: 63px;
+        width: 580px;
+        height: 150px;
     }
 }
