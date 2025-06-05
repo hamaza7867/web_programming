@@ -1,91 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>digiclock | get into Time</title>
+    <title>digiclock | Get into Time</title>
 </head>
-
 <body>
     <header>
         <nav>
             <img src="assets/logo.png" alt="digiclock logo">
-            <ul>
-                <li><a href="#home">home</a></li>
-                <li><a href="#about">about us</a></li>
-                <li><a href="#follow">Follow us</a></li>
-                <li><a href="#contact">Contact us</a></li>
+            <div class="menu-toggle" id="mobile-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="mainNav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#world-clocks">World Clocks</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#follow">Follow Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <div id="home">
+        <section id="home" class="page-section">
             <h1>Welcome to digiclock</h1>
-            <p>Get into Time</p>
-            <div>
-                <h1>digiclock</h1>
+            <p>Your ultimate digital timekeeping companion.</p>
+            <div class="local-clock-display">
+                <h2>Current Local Time</h2>
                 <div id="clock"></div>
                 <div id="date"></div>
             </div>
-        </div>
-        <div id="features">
+        </section>
+
+        <section id="world-clocks" class="page-section">
+            <h2>World Clocks</h2>
+            <p>Stay connected with time zones around the globe.</p>
+
+            <h3>Major Cities</h3>
+            <div class="clock-display-grid">
+                <div class="country-clock-card">
+                    <h3>New York</h3>
+                    <div class="world-clock-time" data-timezone="America/New_York"></div>
+                    <div class="world-clock-date"></div>
+                </div>
+                <div class="country-clock-card">
+                    <h3>London</h3>
+                    <div class="world-clock-time" data-timezone="Europe/London"></div>
+                    <div class="world-clock-date"></div>
+                </div>
+                <div class="country-clock-card">
+                    <h3>Tokyo</h3>
+                    <div class="world-clock-time" data-timezone="Asia/Tokyo"></div>
+                    <div class="world-clock-date"></div>
+                </div>
+                 <div class="country-clock-card">
+                    <h3>Dubai</h3>
+                    <div class="world-clock-time" data-timezone="Asia/Dubai"></div>
+                    <div class="world-clock-date"></div>
+                </div>
+                <div class="country-clock-card">
+                    <h3>Sydney</h3>
+                    <div class="world-clock-time" data-timezone="Australia/Sydney"></div>
+                    <div class="world-clock-date"></div>
+                </div>
+                 <div class="country-clock-card">
+                    <h3>Karachi</h3>
+                    <div class="world-clock-time" data-timezone="Asia/Karachi"></div>
+                    <div class="world-clock-date"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="page-section">
             <h2>Features</h2>
+            <p>Discover the capabilities of digiclock:</p>
             <ul>
-                <li>Real-time clock display</li>
-                <li>Customizable themes</li>
-                <li>Alarm and timer functionality</li>
-                <li>World clock support</li>
-                <li>Live Local Weather (New!)</li>
+                <li>Real-time local clock display with date</li>
+                <li>Multiple world clock timezones</li>
+                <li>User-friendly interface</li>
+                <li>Fully responsive design for all devices</li>
+                <li>Intuitive mobile navigation menu</li>
             </ul>
-            <h2>Technologies Used</h2>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>Responsive Design</li>
-                <li>OpenWeatherMap API</li>
-            </ul>
-            <h2>Get Started</h2>
-            <p>To use digiclock, simply open the application in your web browser. No installation required!</p>
-            <h2>Contribute</h2>
-            <p>We welcome contributions! If you have suggestions or improvements, please reach out to us.</p>
-        </div>
-        <div id="about">
+        </section>
+
+        <section id="about" class="page-section">
             <h2>About Us</h2>
-            <p>digiclock is a simple yet powerful digital clock application designed to help you keep track of time
-                effortlessly.</p>
-            <p>Our mission is to provide a user-friendly interface with essential features for time management, now including live local weather!</p>
-        </div>
-        <div id="follow">
+            <p>digiclock is a project designed to showcase fundamental web development skills using HTML, CSS, and JavaScript. Our mission is to provide a clear, simple, and functional digital clock experience across various time zones, built with modern web practices.</p>
+        </section>
+
+        <section id="follow" class="page-section">
             <h2>Follow Us</h2>
-            <p>Stay updated with the latest news and updates by following us on social media.</p>
+            <p>Stay updated with our latest developments and news!</p>
             <ul class="social-media">
-                <li><a href="https://twitter.com">Twitter</a></li>
-                <li><a href="https://Facebook.com">Facebook</a></li>
-                <li><a href="https://Youtube.com">Youtube</a></li>
-                <li><a href="https://Instagram.com">Instagram</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
             </ul>
-        </div>
-        <div id="contact">
+        </section>
+
+        <section id="contact" class="page-section">
             <h2>Contact Us</h2>
-            <p>If you have any questions or feedback, feel free to reach out to us via email.</p>
+            <p>We value your feedback. Feel free to send us a message.</p>
             <form>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="enter your name" required>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="enter your email" required>
+                <input type="email" id="email" name="email" placeholder="your@example.com" required>
+
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" placeholder="your Message goes here" required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+
                 <button type="submit">Send Message</button>
             </form>
-        </div>
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2025 digiclock. All rights reserved.</p>
     </footer>
+    <button id="backToTopBtn" title="Go to top">&#8593;</button>
+    <button id="whatsappBtn" title="Chat on WhatsApp">
+        <img src="assets/logo.svg" alt="WhatsApp" style="width: 30px; height: 30px; vertical-align: middle;">
+    </button>
     <script src="script.js"></script>
 </body>
-
 </html>
